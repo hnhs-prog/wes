@@ -1,27 +1,24 @@
-function login() {
-  var email = document.getElementById('email').value;
-  var password = document.getElementById('psw').value;
-
-  google.script.run.withSuccessHandler(function(isValid) {
-    if (isValid) {
-      document.getElementById('data-entry').style.display = 'block';
-    } else {
-      alert('Invalid credentials');
-    }
-  }).validateLogin(email, password);
-}
-
 function addEntry() {
-  var email = document.getElementById('email').value;
-  var studentID = document.getElementById('studentID').value;
-  var studentName = document.getElementById('studentName').value;
-  var classID = document.getElementById('classID').value;
-  var subject = document.getElementById('subject').value;
-  var assessment1 = document.getElementById('assessment1').value;
-  var assessment2 = document.getElementById('assessment2').value;
-  var assessment3 = document.getElementById('assessment3').value;
-  var assessment4 = document.getElementById('assessment4').value;
+  var entry = {
+    studentID: document.getElementById('studentID').value,
+    studentName: document.getElementById('studentName').value,
+    classID: document.getElementById('classID').value,
+    subject: document.getElementById('subject').value,
+    assessment1: document.getElementById('assessment1').value,
+    assessment2: document.getElementById('assessment2').value,
+    assessment3: document.getElementById('assessment3').value,
+    assessment4: document.getElementById('assessment4').value
+  };
 
-  google.script.run.addEntry(email, studentID, studentName, classID, subject, assessment1, assessment2, assessment3, assessment4);
-  alert('Entry added successfully');
+  google.script.run.addEntry(entry);
+  
+  // Clear the form fields after submission
+  document.getElementById('studentID').value = '';
+  document.getElementById('studentName').value = '';
+  document.getElementById('classID').value = '';
+  document.getElementById('subject').value = '';
+  document.getElementById('assessment1').value = '';
+  document.getElementById('assessment2').value = '';
+  document.getElementById('assessment3').value = '';
+  document.getElementById('assessment4').value = '';
 }
