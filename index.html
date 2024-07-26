@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Login Page</title>
+</head>
+<body>
+  <h2>Login Page</h2>
+  <div class="container">
+    <label for="email"><b>Email</b></label>
+    <input type="text" id="email" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" id="psw" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" onclick="login()">Login</button>
+  </div>
+
+  <h2>Data Entry</h2>
+  <div class="container" id="data-entry">
+    <label for="studentID"><b>Student ID</b></label>
+    <input type="text" id="studentID" placeholder="Enter Student ID" name="studentID" required>
+
+    <label for="studentName"><b>Student Name</b></label>
+    <input type="text" id="studentName" placeholder="Enter Student Name" name="studentName" required>
+
+    <label for="classID"><b>Class ID</b></label>
+    <input type="text" id="classID" placeholder="Enter Class ID" name="classID" required>
+
+    <label for="subject"><b>Subject</b></label>
+    <input type="text" id="subject" placeholder="Enter Subject" name="subject" required>
+
+    <label for="assessment1"><b>Assessment 1</b></label>
+    <input type="text" id="assessment1" placeholder="Enter Assessment 1" name="assessment1" required>
+
+    <label for="assessment2"><b>Assessment 2</b></label>
+    <input type="text" id="assessment2" placeholder="Enter Assessment 2" name="assessment2" required>
+
+    <label for="assessment3"><b>Assessment 3</b></label>
+    <input type="text" id="assessment3" placeholder="Enter Assessment 3" name="assessment3" required>
+
+    <label for="assessment4"><b>Assessment 4</b></label>
+    <input type="text" id="assessment4" placeholder="Enter Assessment 4" name="assessment4" required>
+
+    <button type="submit" onclick="addEntry()">Add Entry</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
